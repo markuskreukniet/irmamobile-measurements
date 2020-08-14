@@ -7,7 +7,7 @@ stages:
 variables:
   GOPATH: ${CI_PROJECT_DIR}/.cache
   GIT_SUBMODULE_STRATEGY: recursive
-  PACKAGE_NAME: github.com/privacybydesign/irmamobile
+  PACKAGE_NAME: github.com/markuskreukniet/irmamobile-measurements
 
 image:
   name: privacybydesign/android_golang_gomobile_flutter:latest
@@ -36,7 +36,7 @@ build_bridge:
     paths:
       - android/irmagobridge/irmagobridge.aar
   script:
-    - gomobile bind -target android -o android/irmagobridge/irmagobridge.aar github.com/privacybydesign/irmamobile/irmagobridge
+    - gomobile bind -target android -o android/irmagobridge/irmagobridge.aar github.com/markuskreukniet/irmamobile-measurements/irmagobridge
   
 build_app:
   stage: build_app

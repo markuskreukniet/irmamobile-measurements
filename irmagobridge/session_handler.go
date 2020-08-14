@@ -1,8 +1,8 @@
 package irmagobridge
 
 import (
-	irma "github.com/privacybydesign/irmago"
-	"github.com/privacybydesign/irmago/irmaclient"
+	irma "github.com/markuskreukniet/irmago-measurements"
+	"github.com/markuskreukniet/irmago-measurements/irmaclient"
 )
 
 type sessionHandler struct {

@@ -9,7 +9,7 @@ import (
 	"strings"
 
 	"github.com/go-errors/errors"
-	"github.com/privacybydesign/irmago/irmaclient"
+	"github.com/markuskreukniet/irmago-measurements/irmaclient"
 )
 
 // IrmaMobileBridge is the iOS or Android native component that is used for message passing

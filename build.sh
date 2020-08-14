@@ -6,7 +6,7 @@ rm -rf ios
 git checkout -- ios
 
 rm -rf .vendor-new vendor
-gomobile bind -target ios -o ios/Runner/Irmagobridge.framework github.com/privacybydesign/irmamobile/irmagobridge
+gomobile bind -target ios -o ios/Runner/Irmagobridge.framework github.com/markuskreukniet/irmamobile-measurements/irmagobridge
 
 flutter build ios -t lib/main_gemeente.dart
 

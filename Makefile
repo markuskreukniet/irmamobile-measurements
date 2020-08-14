@@ -54,7 +54,7 @@ FLUTTER_URL = https://storage.googleapis.com/flutter_infra/releases/stable/$(FLU
 # Go binary setup
 GOLANG_TARBALL=go$(GOLANG_VERSION).$(OSNAME)-amd64.tar.gz
 GOLANG_URL=https://dl.google.com/go/$(GOLANG_TARBALL)
-export GOPATH ?= "$(patsubst %/src/github.com/privacybydesign/irmamobile/,%,$(PROJECT_ROOT))"
+export GOPATH ?= "$(patsubst %/src/github.com/markuskreukniet/irmamobile-measurements/,%,$(PROJECT_ROOT))"
 ifeq (, $(shell which go))
 	export GOROOT ?= $(abspath gobuild/go)
 else
@@ -72,7 +72,7 @@ flutter-pub-get: flutter-sdk
 # Target for building the android version of the irmagobridge
 irmagobridge-android: android/irmagobridge/irmagobridge.aar
 android/irmagobridge/irmagobridge.aar: android-ndk gomobile-init
-	$(GOPATH)/bin/gomobile bind -target android -o android/irmagobridge/irmagobridge.aar github.com/privacybydesign/irmamobile/irmagobridge
+	$(GOPATH)/bin/gomobile bind -target android -o android/irmagobridge/irmagobridge.aar github.com/markuskreukniet/irmamobile-measurements/irmagobridge
 
 # Target to clean the android version of the irmagobridge
 clean-irmagobridge-android:

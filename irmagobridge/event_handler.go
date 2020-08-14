@@ -2,8 +2,8 @@ package irmagobridge
 
 import (
 	"github.com/go-errors/errors"
-	irma "github.com/privacybydesign/irmago"
-	irmaclient "github.com/privacybydesign/irmago/irmaclient"
+	irma "github.com/markuskreukniet/irmago-measurements"
+	irmaclient "github.com/markuskreukniet/irmago-measurements/irmaclient"
 )
 
 type eventHandler struct {

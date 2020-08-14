@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/privacybydesign/irmamobile/irmagobridge"
+	"github.com/markuskreukniet/irmamobile-measurements/irmagobridge"
 )
 
 type DummyBridge struct {

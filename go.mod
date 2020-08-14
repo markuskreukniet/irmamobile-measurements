@@ -1,4 +1,4 @@
-module github.com/privacybydesign/irmamobile
+module github.com/markuskreukniet/irmamobile-measurements
 
 go 1.13
 

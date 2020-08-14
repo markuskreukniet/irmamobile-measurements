@@ -1,0 +1,52 @@
+stages:
+  - lint
+  - test
+  - build_bridge
+  - build_app
+
+variables:
+  GOPATH: ${CI_PROJECT_DIR}/.cache
+  GIT_SUBMODULE_STRATEGY: recursive
+  PACKAGE_NAME: github.com/privacybydesign/irmamobile
+
+image:
+  name: privacybydesign/android_golang_gomobile_flutter:latest
+
+cache:
+  paths:
+    - .cache
+
+lint:dart:
+  script:
+    - flutter format --line-length=120 --set-exit-if-changed lib/ test/
+  stage: lint
+
+test:flutter:
+  script:
+    - flutter test
+  stage: test
+
+build_bridge:
+  stage: build_bridge
+  interruptible: true
+  only: 
+    - master
+    - merge_requests
+  artifacts:
+    paths:
+      - android/irmagobridge/irmagobridge.aar
+  script:
+    - gomobile bind -target android -o android/irmagobridge/irmagobridge.aar github.com/privacybydesign/irmamobile/irmagobridge
+  
+build_app:
+  stage: build_app
+  interruptible: true
+  only: 
+    - master
+    - merge_requests
+  artifacts:
+    paths:
+      - build/app/outputs/apk/alpha/release/*.apk
+  script:
+    - flutter build apk --target-platform android-arm,android-arm64 --split-per-abi --flavor alpha
+

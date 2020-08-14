@@ -1,0 +1,487 @@
+{
+  "ui": {
+    "loading": "Laden…"
+  },
+  "enrollment": {
+    "welcome": {
+      "header": "Tijdelijk opstartscherm",
+      "abstract": "Dit scherm moet nog opgeruimd worden.",
+      "intro_button": "Introductiescherm",
+      "choose_pin_button": "Pincode kiezen",
+      "not_now": "Niet nu"
+    },
+    "introduction": {
+      "button_text": "Kies je pincode",
+      "screen1": {
+        "title": "IRMA is jouw identiteit op jouw mobiel",
+        "text": "Je officiële naam, geboortedatum, adres, BSN en meer. Alles bij elkaar in jouw IRMA-app."
+      },
+      "screen2": {
+        "title": "Met IRMA maak je jezelf bekend",
+        "text": "Eenvoudig en snel. Je hebt dit zelf in de hand."
+      },
+      "screen3": {
+        "title": "IRMA geeft jou en anderen zekerheid",
+        "text": "Je gegevens staan alleen in jouw IRMA-app. Alleen jij kan erbij.",
+        "privacy": {
+          "text": "Lees de privacyregels",
+          "url": "https://privacybydesign.foundation/privacy-policy/"
+        }
+      }
+    },
+    "choose_pin": {
+      "title": "Beveiliging instellen",
+      "insert_pin": "Kies een pincode van 5 cijfers",
+      "confirm_title": "Herhaal je pincode",
+      "instruction": "Kies een pincode van 5 cijfers",
+      "confirm_instruction": "Vul je pincode nog een keer in",
+      "next": "Volgende",
+      "error_title": "Pincode verkeerd",
+      "error": "De pincodes zijn niet gelijk. Kies opnieuw een pincode.",
+      "error_action": "OK"
+    },
+    "provide_email": {
+      "title": "Beveiliging instellen",
+      "instruction": "Met een e-mailadres kun je je IRMA-app blokkeren bij verlies of diefstal van je mobiel.",
+      "skip": "Overslaan",
+      "next": "Volgende",
+      "error": "Dit is geen geldig e-mailadres",
+      "skip_title": "Weet je het zeker?",
+      "skip_content": "Bescherm jezelf. Als je een e-mailadres invult, kun je jouw IRMA-app blokkeren na het verlies van je mobiel.",
+      "insert_email": "Voer e-mailadres in"
+    },
+    "email_sent": {
+      "title": "Beveiliging instellen",
+      "button": "Doorgaan",
+      "message_title": "Bevestig je e-mailadres",
+      "message_markdown": "Je hebt een e-mail ontvangen van **noreply@sidn.nl**. Open de link in dit bericht om je e-mailadres aan je IRMA-app te koppelen.",
+      "mail_sent_text_markdown": "De e-mail is gestuurd naar: **{emailaddress}**.",
+      "check_spam": "Het kan even duren voordat de e-mail verschijnt. Controleer de spamfolder als je geen e-mail hebt ontvangen."
+    },
+    "submit": {
+      "title": "Aanmelden",
+      "progress_enrollment": "Je wordt aangemeld"
+    }
+  },
+  "about": {
+    "title": "Over IRMA",
+    "header": "Jezelf bekend maken",
+    "slogan": "Met IRMA heb je het zelf in de hand.",
+    "who_is_behind_irma_item": "Wie zit er achter de IRMA-app?",
+    "who_is_behind_irma_explanation_markdown": "IRMA wordt gemaakt door de stichting **Privacy by Design**.  Deze stichting is in 2016 voortgekomen uit de Digital Security onderzoeksgroep van de Radboud Universiteit in Nijmegen. De stichting is onafhankelijk en maakt geen winst.\n\nDe IRMA-app wordt open source ontwikkeld in samenwerking met SIDN, de beheerder van het .nl-domein. Bij de ontwikkeling wordt ook samengewerkt met verschillende overheden en met de zorg. Zo zijn er zo'n 30 gemeenten betrokken, waaronder Nijmegen, Amsterdam en Leiden. IRMA is winnaar van de Nederlandse Privacy Awards 2018.",
+    "check_out": "Bekijk ook: ",
+    "award": "Nederlandse Privacy Awards",
+    "award_link": "https://privacyawards.nl/2018-2/",
+    "why_irma_item": "Waarom bestaat IRMA?",
+    "why_irma_explanation_markdown": "**IRMA bestaat omdat jij het recht hebt op een online identiteit die echt van jou is.** IRMA is geen commerciële app die gebruikt wordt om jou te volgen, te profileren en om jouw persoonsgegevens te verkopen aan derden.\n\nIRMA is ontworpen in de geest van de [Algemene Verordening Persoonsgegevens (AVG)](https://wetten.overheid.nl/BWBR0040940/2019-02-19). Je laat via de IRMA-app alleen die gegevens van jezelf zien die in een bepaalde situatie relevant en nodig zijn.\n\n**Met de IRMA-app heb je jouw identiteit zelf in de hand, in de beveiligde IRMA-app op je eigen mobiel.** De IRMA-app is een krachtig middel om jezelf (online) bekend te maken en om digitaal je handtekening te zetten. Met respect voor jouw privacy.",
+    "privacy_item": "IRMA, privacy en veiligheid",
+    "privacy_explanation_markdown": "De IRMA-app is zo gemaakt dat jij en jij alleen je persoonsgegevens in de app kunt zien en gebruiken. Je persoonsgegevens staan alleen op jouw mobiel en niet ergens in de cloud.\n\nDe IRMA-app is zo gemaakt dat een website of winkel waar je jezelf bekend maakt (cryptografisch) kan controleren dat de gegevens die je toont echt zijn.\n\nDe IRMA-app toont jouw gegevens vanuit je mobiel rechtstreeks aan een website. Niemand anders kan zien dat jij jezelf daar bekendmaakt. Ook de organisatie achter IRMA kan niet meekijken. \n\nMet het gebruik van IRMA ga je akkoord met de privacy policy [link].",
+    "responsibility_item": "Eigen verantwoordelijkheid",
+    "responsibility_explanation": "De website die een IRMA-login aanbiedt, vraagt gegevens die nodig zijn om in te loggen. In de IRMA-app bepaal jij of je akkoord gaat met het doorgeven van de gevraagde gegevens.\nVraagt een website te veel gegevens? Dan is het verstandig om niet akkoord te gaan. Je kunt er ook aan denken om een klacht in te dienen. Dat doe je bij die website of bij de [Autoriteit Persoonsgegevens](https://autoriteitpersoonsgegevens.nl/nl/zelf-doen/gebruik-uw-privacyrechten/klacht-melden-bij-de-ap).\n\nMet de IRMA-app kun je ook een digitale handtekening zetten. Zo'n handtekening kan (juridische) gevolgen hebben. Denk dus goed na voordat je met de IRMA-app een handtekening zet.\n\nAls je een handtekening zet met de IRMA-app, erken je dat de stichting Privacy by Design op geen enkele manier partij is bij enige overeenkomst die je aangaat via een IRMA-handtekening. De stichting is niet verantwoordelijk of aansprakelijk.",
+    "learn_more": "Meer weten",
+    "more_information": "IRMA-website",
+    "irma_website_link": "https://irma.app/?lang=nl",
+    "source_code": "Source code",
+    "source_code_link": "https://github.com/privacybydesign",
+    "contact": "Contact opnemen",
+    "contact_subject": "IRMA-app",
+    "privacy_policy": "IRMA's privacyregels",
+    "privacy_policy_link": "https://privacybydesign.foundation/privacy-policy",
+    "demo": "Veelgesteldevragen & demo's",
+    "demo_link": "in app link",
+    "get_involved": "Blijf op de hoogte en praat mee",
+    "meetups": "IRMA meetups",
+    "meetups_link": "https://privacybydesign.foundation/meetings/",
+    "twitter": "@irma_privacy",
+    "twitter_link": "https://twitter.com/irma_privacy",
+    "github": "GitHub",
+    "github_link": "https://github.com/privacybydesign",
+    "share_slogan": "Gun iedereen privacy, deel IRMA",
+    "share_text": "Check out the IRMA app: https://irma.app",
+    "share": "Deel IRMA",
+    "version": "Versie {version}",
+    "copyright": "Copyright Privacy by Design Foundation, 2020, uitgegeven onder GPL License 3.0",
+    "pbdf": "Privacy by Design",
+    "pbdf_link": "https://privacybydesign.foundation/",
+    "developer_mode_enabled": "Developer modus ingeschakeld"
+  },
+  "manual": {
+    "faq": "Handleiding",
+    "faq_info": "Hoe gebruik je IRMA? Bekijk onderstaande uitleg.",
+    "question_1": "Hoe kan ik met IRMA inloggen op een mobiele website?",
+    "answer_1": {
+      "step_1": "Open de website op je mobiel en kies daar voor inloggen met IRMA.",
+      "step_2": "De IRMA-app start vanzelf op.\nVul je pincode in.",
+      "step_3": "Geef toestemming (of niet) om je gegevens door te geven.",
+      "step_4": "Na het doorgeven ben je ingelogd.\nJe kunt de website nu gebruiken."
+    },
+    "question_2": "Hoe kan ik met IRMA inloggen op een website op mijn computer?",
+    "answer_2": {
+      "step_1": "Open de website op je computer en kies voor inloggen met IRMA.",
+      "step_2": "Open de IRMA-app op je mobiel en vul je pincode in.",
+      "step_3": "Start de QR-code scanner in de IRMA-app. Scan de QR-code op het scherm van je computer.",
+      "step_4": "Geef toestemming (of niet) om je gegevens door te geven.",
+      "step_5": "Na het doorgeven ben je ingelogd.\nVanaf nu kun je de website gebruiken."
+    }
+  },
+  "help": {
+    "title": "Help",
+    "faq": "Veelgestelde vragen",
+    "faq_info": "Bekijk of je vraag hierbij staat.",
+    "question_1": "Wat kan ik met IRMA?",
+    "answer_1_markdown": "Met IRMA kun je makkelijk inloggen en jezelf bekend maken. Je laat alleen die gegevens van jezelf zien die nodig zijn. Om bijvoorbeeld een bepaalde film te kijken, bewijs je dat je ouder dan 16 bent, en verder niets. Ook kun je met IRMA documenten digitaal ondertekenen. Je gebruikt alleen relevante kenmerken van jezelf, in een soort digitaal stempel. Zo kun je met IRMA ondertekenen als arts, als burger of vanuit een andere rol.\n\nEr komen steeds meer websites waarop je met IRMA in kan loggen. Artsen kunnen bijvoorbeeld met IRMA bij medische dossiers op de website [helder](https://www.helder.health/). Vooral bij gemeenten en in de zorg wordt nu aan verder gebruik van IRMA gewerkt zodat je daar met IRMA kunt inloggen. Om een indruk te krijgen van de mogelijkheden kun je zelf een aantal IRMA [demo's](https://privacybydesign.foundation/demo/) uitproberen.",
+    "question_2": "Wat doe ik als ik mijn mobiel verlies?",
+    "answer_2_markdown": "Als je je mobiel verliest kan niemand in je IRMA-app als je tenminste een goede pincode hebt gekozen.\n\nJe kunt jezelf nog beter beschermen: bij het installeren van IRMA heb je de keuze gekregen om een e-mailadres op te geven. Als je dat gedaan hebt, kun je via [MijnIRMA](https://privacybydesign.foundation/mijnirma/) het gebruik van je IRMA-app blokkeren. Dan kan er echt helemaal niks meer met de IRMA-app op je oude, verloren mobiel gebeuren.\n\nAls je nog geen e-mailadres hebt toegevoegd in [MijnIRMA](https://privacybydesign.foundation/mijnirma/), kun je dat alsnog doen. Het is verstandig dat nu te doen.\n\nOp je nieuwe mobiel kun je de IRMA-app opnieuw installeren en opnieuw vullen met jouw gegevens. Daarna kun je gewoon weer verder.",
+    "question_3": "Wat maakt IRMA privacy-vriendelijk en veilig?",
+    "answer_3": "Jouw persoonsgegevens zijn beschermd met je pincode. Jouw gegevens staan in de IRMA-app op je mobiel en niet in de cloud.\n\nIn de IRMA-app zijn jouw persoonsgegevens digitaal ondertekend door de bron (uitgever) waar de gegevens vandaan komen (bijvoorbeeld de Rijksoverheid of de gemeente).\n\nDaardoor kan een website of winkel, als je jezelf bekend maakt, cryptografisch controleren dat de gegevens echt zijn. \nDeze uitwisseling van persoonsgegevens vindt rechtstreeks plaats tussen jouw mobiel en deze website. Niemand anders kan zien dat jij je daar bekendmaakt. Ook de organisatie achter IRMA kan niet meekijken.",
+    "question_4": "Waar staan mijn IRMA-gegevens opgeslagen?",
+    "answer_4": "Jouw gegevens staan in de IRMA-app op je mobiel en níet in de cloud.\n\nJij geeft zelf steeds expliciet toestemming (of niet) om je persoonsgegevens vanuit de IRMA-app aan een website door te geven.\nAls je jouw gegevens uit de IRMA-app verwijdert, zijn ze ook echt weg uit IRMA.",
+    "question_5": "Waarom zijn gegevens in de IRMA-app beperkt geldig?",
+    "answer_5": "In IRMA kun je op elk kaartje zien hoe lang ze geldig zijn. Die geldigheidsduur hangt af van het soort gegevens en hoe veranderlijk ze zijn. Je naam en geboortedatum zijn vijf jaar geldig, maar je adres slechts één jaar. De bron (uitgever) van de gegevens bepaalt de geldigheidsduur. De geldigheid van gegevens kan dus verlopen. De IRMA-app geeft je daar een waarschuwing voor.\n\nJe kunt je gegevens altijd, ook zonder waarschuwing, verversen door ze opnieuw op te halen bij de bron. Bijvoorbeeld, na je 18e verjaardag kun je opnieuw je gegevens bij je gemeente ophalen en kun je met de IRMA-app bewijzen dat je ouder dan 18 jaar bent.",
+    "question_6": "Kan ik IRMA op meerdere mobiele telefoons zetten?",
+    "answer_6": "Ja, je kunt op iedere mobiele telefoon (Android of iOS) een apart IRMA-account openen en vullen met kaartjes met jouw gegevens. Het is wel verstandig om dat te doen. Als je het ene apparaat kwijt bent, kun je altijd nog met het andere apparaat inloggen.",
+    "ask": "Vraag stellen",
+    "more": "Meer vragen en antwoorden",
+    "more_link": "https://irma.app/?lang=nl#faqs",
+    "send": "Heb je een andere vraag? Stuur een e-mail. Houd er rekening mee dat het enkele dagen kan duren voor je antwoord krijgt.",
+    "back_button": "Terug naar IRMA-kaartjes",
+    "email": "Stuur een e-mail",
+    "contact": "app@privacybydesign.foundation",
+    "mail_subject": "Hulp met de IRMA-app",
+    "mail_error_title": "Sorry",
+    "mail_error": "Mail-applicatie kan niet worden geopend",
+    "mail_error_button": "OK"
+  },
+  "drawer": {
+    "lock_wallet": "Uitloggen",
+    "add_cards": "Kaartjes toevoegen",
+    "settings": "Instellingen",
+    "help": "Help",
+    "history": "Geschiedenis",
+    "about": "Over IRMA"
+  },
+  "webview": {
+    "open_iOS": "Open in Safari",
+    "open_browser": "Open in browser",
+    "cancel": "Annuleren",
+    "select": "Selecteer",
+    "alert_title": "Website niet veilig",
+    "alert_message": "De website die je wilt bezoeken is niet veilig. Je kunt deze website niet binnen IRMA bekijken. Open een andere app als je de website toch wilt bezoeken.",
+    "alert_button": "Sluiten"
+  },
+  "accessibility": {
+    "irma_logo": "IRMA Logo",
+    "menu": "Menu",
+    "back": "Terug",
+    "close": "Sluiten",
+    "next": "Volgende",
+    "previous": "Vorige",
+    "unfold": "Uitvouwen",
+    "update": "Bijwerken",
+    "remove": "Verwijderen",
+    "expand": "Uitklappen",
+    "refresh": "Verversen"
+  },
+  "card": {
+    "personaldata": "Persoonsgegevens",
+    "expiresAt": "Geldig tot",
+    "delete": "Kaart verwijderen",
+    "refresh": "Kaart verversen",
+    "delete_title": "Weet je het zeker?",
+    "delete_content": "Als je doorgaat, verwijder je dit kaartje uit je IRMA-app.",
+    "delete_confirm": "Verwijder kaartje",
+    "delete_deny": "Annuleer"
+  },
+  "card_store": {
+    "app_bar": "Kaartjes toevoegen",
+    "choose": "Kies de gegevens die je wilt toevoegen.",
+    "search": "Zoek...",
+    "personal_data": "Persoonsgegevens",
+    "identity_cards": "Identiteitsbewijzen",
+    "education": "Onderwijs",
+    "health": "Zorg",
+    "card_info": {
+      "app_bar": "Gegevens toevoegen",
+      "header_credential_type": "{credential_type} toevoegen",
+      "obtain": "toevoegen",
+      "issuer": "Bron",
+      "purpose_question": "Wat kun je met deze gegevens?",
+      "content_question": "Welke gegevens haal je op?",
+      "howto_question": "Hoe werkt het?",
+      "back_button": "Annuleer",
+      "get_button": "Voeg toe"
+    }
+  },
+  "settings": {
+    "title": "Instellingen",
+    "start_qr": "QR-scanner automatisch openen na opstarten",
+    "change_pin": "Je pincode veranderen",
+    "advanced": {
+      "header": "Geavanceerd",
+      "experimental_data": "Maak het mogelijk experimentele gegevens toe te voegen.",
+      "report_errors": "Fouten naar IRMA sturen",
+      "delete": "Verwijder alles en begin opnieuw",
+      "delete_title": "Weet je het zeker?",
+      "delete_content": "Als je doorgaat, verwijder je al je kaartjes en je toegang tot de IRMA-app. Wil je de IRMA-app opnieuw gebruiken? Kies een nieuwe pincode en haal je kaartjes opnieuw op.",
+      "delete_confirm": "Verwijder alles",
+      "delete_deny": "Annuleer",
+      "developer_mode": "Developer modus"
+    }
+  },
+  "change_pin": {
+    "enter_pin": {
+      "title": "Pincode veranderen",
+      "instruction": "Vul eerst je huidige pincode in",
+      "error_title": "Verkeerde pincode",
+      "error": "Vul je huidige pincode in",
+      "error_action": "OK"
+    },
+    "validating_pin": {
+      "header": "Even geduld",
+      "details": "Je pincode wordt gecontroleerd"
+    },
+    "choose_pin": {
+      "title": "Pincode veranderen",
+      "instruction": "Kies je nieuwe pincode",
+      "switch_long": "Liever een langere pincode?",
+      "switch_short": "Liever een kortere pincode?",
+      "error_title": "Verkeerde pincode",
+      "error": "De pincodes zijn niet gelijk. Kies opnieuw een pincode.",
+      "error_action": "OK"
+    },
+    "confirm_pin": {
+      "title": "Pincode veranderen",
+      "instruction": "Vul je nieuwe pincode nog een keer in."
+    },
+    "updating_pin": {
+      "header": "Even geduld graag",
+      "details": "Je pincode wordt veranderd"
+    },
+    "success": {
+      "title": "Gelukt",
+      "message": "Je pincode is veranderd.",
+      "continue": "OK"
+    }
+  },
+  "qr_scanner": {
+    "instruction": {
+      "title": "Begin met scannen",
+      "message": "Richt je mobiel op een IRMA QR-code",
+      "semantic": "Begin met scannen! Richt je mobiel op een IRMA QR-code."
+    },
+    "success": {
+      "title": "Gelukt",
+      "message": "De QR-code is gescand",
+      "semantic": "Gelukt! De QR-code is gescand."
+    },
+    "error": {
+      "title": "Sorry",
+      "message": "Dit is geen IRMA QR-code",
+      "semantic": "Sorry! Dit is geen IRMA QR-code."
+    }
+  },
+  "pin_common": {
+    "blocked_for": "Login is geblokkeerd voor",
+    "second": {
+      "time-0": "{time} seconden",
+      "time-1": "{time} seconde",
+      "time-2": "{time} seconden"
+    },
+    "minute": {
+      "time-0": "{time} minuten",
+      "time-1": "{time} minuut",
+      "time-2": "{time} minuten"
+    },
+    "hour": {
+      "time-0": "{time} uren",
+      "time-1": "{time} uur",
+      "time-2": "{time} uren"
+    },
+    "day": {
+      "time-0": "{time} dagen",
+      "time-1": "{time} dag",
+      "time-2": "{time} dagen"
+    },
+    "invalid_title": "Pincode verkeerd",
+    "invalid_pin": {
+      "attempts-0": "Deze pincode is niet juist. Je hebt nog {attemps} pogingen voordat je IRMA-app tijdelijk wordt geblokkeerd.",
+      "attempts-1": "Deze pincode is niet juist. Je hebt nog {attemps} poging voordat je IRMA-app tijdelijk wordt geblokkeerd.",
+      "attempts-2": "Deze pincode is niet juist. Je hebt nog {attemps} pogingen voordat je IRMA-app tijdelijk wordt geblokkeerd."
+    },
+    "invalid_close": "Opnieuw proberen",
+    "blocked_title": "Account geblokkeerd",
+    "blocked_pin": "Je account is voor {blocked} geblokkeerd. Probeer het later nog een keer.",
+    "blocked_close": "Opnieuw proberen",
+    "done": "Doorgaan",
+    "view": "Pincode tonen",
+    "hide": "Pincode verbergen"
+  },
+  "pin": {
+    "title": "Inloggen",
+    "subtitle": "Voer je pincode in",
+    "seconds": "seconden",
+    "button_forgot": "Pincode vergeten",
+    "button_block": "IRMA blokkeren"
+  },
+  "session_pin": {
+    "subtitle": "Voer je pincode opnieuw in om verder te gaan.",
+    "explanation": "Voor de zekerheid vraagt de IRMA-app regelmatig opnieuw je pincode."
+  },
+  "error": {
+    "title": "Er gaat iets fout",
+    "button_ok": "OK",
+    "button_send_to_irma": "Stuur naar het technische team van IRMA",
+    "button_show_error": "Technische details tonen",
+    "button_retry": "Opnieuw proberen",
+    "button_back": "Terug",
+    "types": {
+      "general": "Er is iets misgegaan.\n\nAls het fout blijft gaan, laat het dan weten aan het technische team van IRMA.",
+      "no_internet": "Er is iets misgegaan. Er kan geen verbinding gemaakt worden met de IRMA-server.\n\nControleer je internetverbinding. IRMA werkt niet zonder internet."
+    }
+  },
+  "wallet": {
+    "title": "IRMA-kaartjes",
+    "scan_qr_code": "Scan QR-code",
+    "open_menu": "Menu openen",
+    "close_menu": "Menu sluiten",
+    "toggle": "Weergave wisselen",
+    "issuer": "Uitgever",
+    "expiration": "Kaartje geldig tot",
+    "expired": "Dit kaartje is verlopen",
+    "expired_on": "Kaartje verlopen",
+    "expires_soon": {
+      "data-0": "Kaartje verloopt over {} dagen"
+    },
+    "revoked": "Dit kaartje is niet meer geldig",
+    "not_valid": "Kaartje niet geldig",
+    "refresh": "Ververs kaartje",
+    "close": "Sluiten",
+    "help": "Help",
+    "caption": "Jouw gegevens veilig op je mobiel",
+    "pbdf_gemeente_personalData": {
+      "nudge": "Voeg je persoonsgegevens toe"
+    },
+    "add_data": "Voeg meer gegevens toe",
+    "lock": "Uitloggen"
+  },
+  "history": {
+    "title": "Geschiedenis",
+    "button_back": "Terug",
+    "type": {
+      "removal": {
+        "header": "Kaartjes verwijderd op",
+        "subtitle": "Verwijderde kaartjes",
+        "data-0": "{data} kaart verwijderd",
+        "data-1": "{data} kaart verwijderd",
+        "data-2": "{data} kaarten verwijderd"
+      },
+      "issuing": {
+        "header": "Kaartjes ontvangen van",
+        "subtitle": "Ontvangen kaartjes",
+        "data-0": "{data} kaart ontvangen van",
+        "data-1": "{data} kaart ontvangen van",
+        "data-2": "{data} kaarten ontvangen van"
+      },
+      "disclosing_header": "Gegevens doorgegeven aan",
+      "disclosing": {
+        "header": "Gegevens doorgegeven aan",
+        "subtitle": "Doorgegeven gegevens",
+        "data-0": "{data} gegeven doorgegeven aan",
+        "data-1": "{data} gegeven doorgegeven aan",
+        "data-2": "{data} gegevens doorgegeven aan"
+      },
+      "siging_header": "Getekend met gegevens voor",
+      "signing": {
+        "header": "Gegevens ondertekend op verzoek van",
+        "subtitle": "Ondertekende bericht",
+        "subtitle_used_data": "Ondertekend met de persoonsgegevens",
+        "data-0": "Getekend met {data} gegeven op verzoek van",
+        "data-1": "Getekend met {data} gegeven op verzoek van",
+        "data-2": "Getekend met {data} gegevens op verzoek van"
+      }
+    }
+  },
+  "issuance": {
+    "title": "Kaartjes toevoegen",
+    "header-0": "Wil je dit kaartje in je IRMA app zetten?",
+    "header-1": "Wil je dit kaartje in je IRMA app zetten?",
+    "header-2": "Wil je deze kaartjes in je IRMA app zetten?"
+  },
+  "session": {
+    "navigation_bar": {
+      "yes": "Ja",
+      "no": "Nee, liever niet",
+      "back": "Terug"
+    }
+  },
+  "disclosure": {
+    "title": "Jezelf bekend maken",
+    "disclosure_header_markdown": "Wil je dit aan **{otherParty}** doorgeven?",
+    "disclosure_call_header_markdown": "Wil je dit aan **{otherParty}** doorgeven en bellen naar **{phoneNumber}**?",
+    "signing_header": " verzoekt jou om een bericht te ondertekenen",
+    "issuer": "Uitgever",
+    "credential_name": "Kaartje",
+    "choices": "{choices} keuzes",
+    "next": "volgende kiezen",
+    "previous": "vorige kiezen",
+    "not_present": "Deze gegevens zijn nog niet aan IRMA toegevoegd.",
+    "expired": "Deze gegevens zijn verlopen.",
+    "revoked": "Deze gegevens zijn teruggetrokken.",
+    "not_revokable": "Deze gegevens moeten eerst ververst worden.",
+    "unsatisfiable_title": "Gegevens ophalen",
+    "unsatisfiable_message_markdown": "Er worden gegevens gevraagd die nog niet in je IRMA-app staan of verlopen zijn. Voeg de gegevens toe om ze vervolgens door te kunnen geven.",
+    "obtain": "Toevoegen",
+    "refresh": "Verversen",
+    "nothing_selected": "Niets gekozen",
+    "explanation": {
+      "title": "Zo maak je een keuze",
+      "body": "Kies welke gegevens je doorgeeft. Gebruik het pijltje of swipe en maak je keuze.",
+      "dismiss": "OK",
+      "dismiss-remember": "Niet meer tonen"
+    },
+    "redirect": "Je wordt teruggeleid naar de webpagina...",
+    "see_more": "Scroll naar beneden om de rest te zien.",
+    "feedback": {
+      "header": {
+        "true": "Gelukt",
+        "false": "Afgebroken"
+      },
+      "text": {
+        "true": "Je gegevens zijn doorgegeven aan {otherParty}",
+        "false": "Je gegevens zijn niet doorgegeven aan {otherParty}"
+      },
+      "ok": "OK"
+    },
+    "call_info": {
+      "title": "Via IRMA bellen",
+      "success": "Gegevens doorgegegeven",
+      "success_message_markdown": "Je gegevens zijn doorgegegeven aan **{otherParty}**.\nVoer de volgende stappen uit om te bellen.",
+      "success_message_ios_markdown": "Je gegevens zijn doorgegegeven aan **{otherParty}**.",
+      "continue": "1. Kies doorgaan",
+      "continue_ios": "Kies doorgaan om te bellen",
+      "continue_message": "Je belapplicatie opent nu vanzelf. Het telefoonnummer is al ingevuld, met een koppelcode.",
+      "continue_message_ios": "Er verschijnt een pop-up met de keuze om te bellen. Het telefoonnummer is al ingevuld, met een koppelcode. Als je bellen kiest, hoor je een paar piepjes en word je verbonden.",
+      "call": "2. Klik op de belknop in je belapplicatie",
+      "call_message": "Je hoort een paar piepjes en wordt verbonden.",
+      "continue_button": "Doorgaan"
+    }
+  },
+  "reset_pin": {
+    "title": "Pincode vergeten",
+    "message": "Pincode vergeten? Dat is vervelend voor je. De organisatie achter IRMA weet jouw pincode ook niet en kan je hiermee dus niet helpen. Als je IRMA wilt blijven gebruiken, moet je helaas opnieuw beginnen: een nieuwe pincode kiezen en nieuwe kaartjes ophalen.",
+    "existing_data_title": "Wat gebeurt er met mijn oude kaartjes?",
+    "existing_data_message": "Je oude kaartjes worden uit je mobiel verwijderd. Je kunt nieuwe kaartjes ophalen en daarmee IRMA weer gebruiken.",
+    "back": "Annuleer",
+    "reset": "Begin opnieuw",
+    "existing_data_removed": "Alle kaartjes in je IRMA-app worden verwijderd."
+  },
+  "arrow_back": {
+    "info_1": "Gelukt, je gegevens zijn doorgegeven.\n\n",
+    "safari": "Tik bovenin op de naam van het programma ",
+    "info_2": "(bijvoorbeeld Safari, Chrome, Firefox) om terug te gaan naar het programma waar je mee bezig was."
+  },
+  "update": {
+    "required": "Om IRMA te blijven gebruiken, zul je de app moeten updaten.",
+    "doupdate": "Update"
+  }
+}

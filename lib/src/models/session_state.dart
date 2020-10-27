@@ -17,6 +17,8 @@ class SessionState {
   final ConCon<AttributeIdentifier> disclosureChoices;
   final bool satisfiable;
   final SessionError error;
+  final bool measurementAgain;
+  final String measurementType;
 
   SessionState({
     this.sessionID,
@@ -32,6 +34,8 @@ class SessionState {
     this.disclosureChoices,
     this.satisfiable,
     this.error,
+    this.measurementAgain,
+    this.measurementType,
   });
 
   bool get canDisclose =>
@@ -58,6 +62,8 @@ class SessionState {
     ConCon<AttributeIdentifier> disclosureChoices,
     bool satisfiable,
     SessionError error,
+    bool measurementAgain,
+    String measurementType,
   }) {
     return SessionState(
       sessionID: sessionID,
@@ -73,6 +79,8 @@ class SessionState {
       disclosureChoices: disclosureChoices ?? this.disclosureChoices,
       satisfiable: satisfiable ?? this.satisfiable,
       error: error ?? this.error,
+      measurementAgain: measurementAgain ?? this.measurementAgain,
+      measurementType: measurementType ?? this.measurementType,
     );
   }
 }

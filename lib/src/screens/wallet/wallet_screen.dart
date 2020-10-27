@@ -18,6 +18,10 @@ import 'package:irmamobile/src/screens/wallet/widgets/wallet_drawer.dart';
 import 'package:irmamobile/src/theme/irma_icons.dart';
 import 'package:irmamobile/src/widgets/irma_app_bar.dart';
 
+import 'dart:io';
+import 'package:path_provider/path_provider.dart';
+import 'package:permission_handler/permission_handler.dart';
+
 class WalletScreen extends StatelessWidget {
   static const routeName = "/wallet";
 
@@ -46,12 +50,56 @@ class _WalletScreenState extends State<_WalletScreen> {
   StreamSubscription _lockListenerSubscription;
   bool isWalletLocked = true;
 
-  void qrScannerPressed() {
-    Navigator.pushNamed(context, ScannerScreen.routeName);
+  void _navigateToScannerScreen([String measurementType]) {
+    if (measurementType != null) {
+      Navigator.pushNamed(context,
+        ScannerScreen.routeName,
+        arguments: {'measurementType': measurementType});
+    } else {
+      Navigator.pushNamed(context,
+        ScannerScreen.routeName);
+    }
+  }
+
+  void qrScannerPressed() async {
+    _navigateToScannerScreen();
+  }
+
+  void qrScannerDisclosurePressed() async {
+    _navigateToScannerScreen("disclosureMeasurement");
+  }
+
+  void qrScannerIssuancePressed() async {
+    _navigateToScannerScreen("issuanceMeasurement");
+  }
+
+  void qrScannerTorDisclosurePressed() async {
+    _navigateToScannerScreen("torDisclosureMeasurement");
+  }
+
+  void qrScannerTorIssuancePressed() async {
+    _navigateToScannerScreen("torIssuanceMeasurement");
   }
 
   void helpPressed() {
     Navigator.pushNamed(context, HelpScreen.routeName);
+  }
+
+  void writeFileTestPressed() {
+    writeFileTest();
+  }
+
+  Future writeFileTest() async {
+    if (await Permission.storage.request().isGranted) {
+      try {
+        // storage/emulated/0/Android/data/foundation.privacybydesign.irmamobile.alpha/files
+        var dir = await getExternalStorageDirectory();
+        final file = File('${dir.path}/test.txt');
+        file.writeAsString('test string');
+      } catch (e) {
+        print(e);
+      }
+    }
   }
 
   void addCardsPressed() {
@@ -147,7 +195,12 @@ class _WalletScreenState extends State<_WalletScreen> {
                 newCardIndex: newCardIndex,
                 showNewCardAnimation: state.showNewCardAnimation,
                 onQRScannerPressed: qrScannerPressed,
+                onQRScannerDisclosurePressed: qrScannerDisclosurePressed,
+                onQRScannerIssuancePressed: qrScannerIssuancePressed,
+                onQRScannerTorDisclosurePressed: qrScannerTorDisclosurePressed,
+                onQRScannerTorIssuancePressed: qrScannerTorIssuancePressed,
                 onHelpPressed: helpPressed,
+                onWriteFileTestPressed: writeFileTestPressed,
                 onAddCardsPressed: addCardsPressed,
                 onNewCardAnimationShown: onNewCardAnimationShown,
               );

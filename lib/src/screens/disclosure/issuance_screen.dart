@@ -121,6 +121,8 @@ class _IssuanceScreenState extends State<IssuanceScreen> {
             return buildLoadingIndicator();
           }
 
+          WidgetsBinding.instance.addPostFrameCallback((_) => _givePermission(sessionStateSnapshot.data));
+
           final session = sessionStateSnapshot.data;
           if (session.status == SessionStatus.requestIssuancePermission) {
             return _buildPermissionWidget(session);
@@ -173,7 +175,7 @@ class _IssuanceScreenState extends State<IssuanceScreen> {
 
     if (session.continueOnSecondDevice && !session.isReturnPhoneNumber) {
       // If this is a session on a second screen, return to the wallet
-      popToWallet(context);
+      popToWallet(context, session.measurementAgain, session.measurementType);
       // TODO: Maybe show some error screen on error or cancel
     } else if (session.clientReturnURL != null &&
         !session.isReturnPhoneNumber &&

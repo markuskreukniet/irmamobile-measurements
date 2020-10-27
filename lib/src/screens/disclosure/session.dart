@@ -9,9 +9,9 @@ import 'package:irmamobile/src/widgets/loading_indicator.dart';
 
 class SessionScreenArguments {
   final int sessionID;
-  final String sessionType;
+  final String measurementType;
 
-  SessionScreenArguments({this.sessionID, this.sessionType});
+  SessionScreenArguments({this.sessionID, this.measurementType});
 }
 
 void toErrorScreen(BuildContext context, SessionError error, VoidCallback onTapClose) {
@@ -29,12 +29,22 @@ void toErrorScreen(BuildContext context, SessionError error, VoidCallback onTapC
   );
 }
 
-void popToWallet(BuildContext context) {
+void popToWallet(BuildContext context, [bool measurementAgain, String measurementType]) {
   Navigator.of(context).popUntil(
     ModalRoute.withName(
       WalletScreen.routeName,
     ),
   );
+
+  if (measurementAgain != null && measurementType != null) {
+    if (measurementAgain && measurementType != "") {
+      Navigator.pushNamed(
+        context,
+        "/scanner",
+        arguments: {'measurementType': measurementType}
+      );
+    }
+  }
 }
 
 Widget buildLoadingIndicator() {

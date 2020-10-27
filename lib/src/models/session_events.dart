@@ -108,10 +108,19 @@ class ClientReturnURLSetSessionEvent extends SessionEvent {
 
 @JsonSerializable()
 class SuccessSessionEvent extends SessionEvent {
-  SuccessSessionEvent({int sessionID, this.result}) : super(sessionID);
+  SuccessSessionEvent({int sessionID,
+    this.result,
+    this.measurementAgain,
+    this.measurementType}) : super(sessionID);
 
   @JsonKey(name: 'Result')
   String result;
+
+  @JsonKey(name: 'MeasurementAgain')
+  bool measurementAgain;
+
+  @JsonKey(name: 'MeasurementType')
+  String measurementType;
 
   factory SuccessSessionEvent.fromJson(Map<String, dynamic> json) => _$SuccessSessionEventFromJson(json);
   Map<String, dynamic> toJson() => _$SuccessSessionEventToJson(this);

@@ -18,7 +18,9 @@ class ScannerScreen extends StatelessWidget {
     Navigator.of(context).pop();
   }
 
-  void _onSuccess(BuildContext context, SessionPointer sessionPointer) {
+  void _onSuccess(BuildContext context, SessionPointer sessionPointer) async {
+    await Future.delayed(Duration(seconds: 1));
+
     HapticFeedback.vibrate();
     startSessionAndNavigate(
       Navigator.of(context),
@@ -55,20 +57,20 @@ class ScannerScreen extends StatelessWidget {
           // replace webview with session screen
           navigator.pushReplacementNamed(
             screen,
-            arguments: SessionScreenArguments(sessionID: event.sessionID, sessionType: event.request.irmaqr),
+            arguments: SessionScreenArguments(sessionID: event.sessionID, measurementType: event.request.measurementType),
           );
         } else {
           // webview is already dismissed, just push the session screen
           navigator.pushNamed(
             screen,
-            arguments: SessionScreenArguments(sessionID: event.sessionID, sessionType: event.request.irmaqr),
+            arguments: SessionScreenArguments(sessionID: event.sessionID, measurementType: event.request.measurementType),
           );
         }
       } else {
         navigator.pushNamedAndRemoveUntil(
           DisclosureScreen.routeName,
           ModalRoute.withName(WalletScreen.routeName),
-          arguments: SessionScreenArguments(sessionID: event.sessionID, sessionType: event.request.irmaqr),
+          arguments: SessionScreenArguments(sessionID: event.sessionID, measurementType: event.request.measurementType),
         );
       }
     });
@@ -76,6 +78,27 @@ class ScannerScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Map arguments = ModalRoute.of(context).settings.arguments as Map;
+
+    if (arguments != null) {
+      SessionPointer sp = new SessionPointer();
+
+      sp.u = "http://141.138.142.35:8088/irma/session/F6S2w69mpyX8ABOHbTtO";
+      sp.measurementType = arguments['measurementType'];
+      sp.returnURL = null;
+
+      if (arguments['measurementType'] == "disclosureMeasurement"
+        || arguments['measurementType'] == "torDisclosureMeasurement") {
+          sp.irmaqr = "disclosing";
+      } else if (arguments['measurementType'] == "issuanceMeasurement"
+        || arguments['measurementType'] == "torIssuanceMeasurement") {
+          sp.irmaqr = "issuing";
+      }
+
+      WidgetsBinding.instance.addPostFrameCallback((_) => _onSuccess(context, sp));
+      return Container(height: 0);
+    }
+
     return Scaffold(
       appBar: IrmaAppBar(
         title: const Text('QR code scan'),

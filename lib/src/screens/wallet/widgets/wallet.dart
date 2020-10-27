@@ -38,7 +38,12 @@ class Wallet extends StatefulWidget {
     this.newCardIndex,
     this.showNewCardAnimation,
     this.onQRScannerPressed,
+    this.onQRScannerDisclosurePressed,
+    this.onQRScannerIssuancePressed,
+    this.onQRScannerTorDisclosurePressed,
+    this.onQRScannerTorIssuancePressed,
     this.onHelpPressed,
+    this.onWriteFileTestPressed,
     this.onAddCardsPressed,
     @required this.onNewCardAnimationShown,
   }) : super(key: key);
@@ -49,7 +54,12 @@ class Wallet extends StatefulWidget {
   final int newCardIndex;
   final bool showNewCardAnimation;
   final VoidCallback onQRScannerPressed;
+  final VoidCallback onQRScannerDisclosurePressed;
+  final VoidCallback onQRScannerIssuancePressed;
+  final VoidCallback onQRScannerTorDisclosurePressed;
+  final VoidCallback onQRScannerTorIssuancePressed;
   final VoidCallback onHelpPressed;
+  final VoidCallback onWriteFileTestPressed;
   final VoidCallback onAddCardsPressed;
   final VoidCallback onNewCardAnimationShown;
 
@@ -303,8 +313,16 @@ class WalletState extends State<Wallet> with TickerProviderStateMixin {
                           ),
 
                           Positioned(
-                            left: 16,
-                            bottom: (screenWidth * _walletAspectRatio - _walletIconHeight) / 2,
+                            left: 0,
+                            bottom: 32,
+                            child: Text(
+                              'Help',
+                              style: TextStyle(fontSize: 8),
+                            ),
+                          ),
+                          Positioned(
+                            left: 0,
+                            bottom: 0,
                             child: WalletButton(
                               svgFile: 'assets/wallet/btn_help.svg',
                               accessibleName: "wallet.help",
@@ -312,12 +330,105 @@ class WalletState extends State<Wallet> with TickerProviderStateMixin {
                             ),
                           ),
                           Positioned(
-                            right: 16,
-                            bottom: (screenWidth * _walletAspectRatio - _walletIconHeight) / 2,
+                            left: 32 + 2 + 0.0,
+                            bottom: 32,
+                            child: Text(
+                              'WFTest',
+                              style: TextStyle(fontSize: 8),
+                            ),
+                          ),
+                          Positioned(
+                            left: 32 + 2 + 0.0,
+                            bottom: 0,
+                            child: WalletButton(
+                              svgFile: 'assets/wallet/btn_help.svg',
+                              accessibleName: "wallet.help",
+                              clickStreamSink: widget.onWriteFileTestPressed,
+                            ),
+                          ),
+                          Positioned(
+                            right: 0,
+                            bottom: 32 + 8 + 32 + 0.0,
+                            child: Text(
+                              'DEF',
+                              style: TextStyle(fontSize: 8),
+                            ),
+                          ),
+                          Positioned(
+                            right: 0,
+                            bottom: 32 + 8 + 0.0,
                             child: WalletButton(
                               svgFile: 'assets/wallet/btn_qrscan.svg',
                               accessibleName: "wallet.scan_qr_code",
                               clickStreamSink: widget.onQRScannerPressed,
+                            ),
+                          ),
+                          Positioned(
+                            right: 0,
+                            bottom: 32,
+                            child: Text(
+                              'DSM',
+                              style: TextStyle(fontSize: 8),
+                            ),
+                          ),
+                          Positioned(
+                            right: 0,
+                            bottom: 0,
+                            child: WalletButton(
+                              svgFile: 'assets/wallet/btn_qrscan.svg',
+                              accessibleName: "wallet.scan_qr_code",
+                              clickStreamSink: widget.onQRScannerDisclosurePressed,
+                            ),
+                          ),
+                          Positioned(
+                            right: 32 + 2 + 0.0,
+                            bottom: 32,
+                            child: Text(
+                              'ISM',
+                              style: TextStyle(fontSize: 8),
+                            ),
+                          ),
+                          Positioned(
+                            right: 32 + 2 + 0.0,
+                            bottom: 0,
+                            child: WalletButton(
+                              svgFile: 'assets/wallet/btn_qrscan.svg',
+                              accessibleName: "wallet.scan_qr_code",
+                              clickStreamSink: widget.onQRScannerIssuancePressed,
+                            ),
+                          ),
+                          Positioned(
+                            right: 64 + 4 + 0.0,
+                            bottom: 32,
+                            child: Text(
+                              'TDSM',
+                              style: TextStyle(fontSize: 8),
+                            ),
+                          ),
+                          Positioned(
+                            right: 64 + 4 + 0.0,
+                            bottom: 0,
+                            child: WalletButton(
+                              svgFile: 'assets/wallet/btn_qrscan.svg',
+                              accessibleName: "wallet.scan_qr_code",
+                              clickStreamSink: widget.onQRScannerTorDisclosurePressed,
+                            ),
+                          ),
+                          Positioned(
+                            right: 96 + 6 + 0.0,
+                            bottom: 32,
+                            child: Text(
+                              'TISM',
+                              style: TextStyle(fontSize: 8),
+                            ),
+                          ),
+                          Positioned(
+                            right: 96 + 6 + 0.0,
+                            bottom: 0,
+                            child: WalletButton(
+                              svgFile: 'assets/wallet/btn_qrscan.svg',
+                              accessibleName: "wallet.scan_qr_code",
+                              clickStreamSink: widget.onQRScannerTorIssuancePressed,
                             ),
                           ),
 

@@ -92,12 +92,16 @@ SuccessSessionEvent _$SuccessSessionEventFromJson(Map<String, dynamic> json) {
   return SuccessSessionEvent(
     sessionID: json['SessionID'] as int,
     result: json['Result'] as String,
+    measurementAgain: json['MeasurementAgain'] as bool,
+    measurementType: json['MeasurementType'] as String,
   );
 }
 
 Map<String, dynamic> _$SuccessSessionEventToJson(SuccessSessionEvent instance) => <String, dynamic>{
       'SessionID': instance.sessionID,
       'Result': instance.result,
+      'MeasurementAgain': instance.measurementAgain,
+      'MeasurementType': instance.measurementType,
     };
 
 FailureSessionEvent _$FailureSessionEventFromJson(Map<String, dynamic> json) {

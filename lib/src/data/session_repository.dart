@@ -106,6 +106,8 @@ class SessionRepository {
     } else if (event is SuccessSessionEvent) {
       return prevState.copyWith(
         status: SessionStatus.success,
+        measurementAgain: event.measurementAgain,
+        measurementType: event.measurementType,
       );
     } else if (event is CanceledSessionEvent) {
       return prevState.copyWith(status: SessionStatus.canceled);

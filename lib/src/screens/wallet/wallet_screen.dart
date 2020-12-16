@@ -81,6 +81,22 @@ class _WalletScreenState extends State<_WalletScreen> {
     _navigateToScannerScreen("torIssuanceMeasurement");
   }
 
+  void qrScannerDisclosureHttpsPressed() async {
+    _navigateToScannerScreen("disclosureHttpsMeasurement");
+  }
+
+  void qrScannerIssuanceHttpsPressed() async {
+    _navigateToScannerScreen("issuanceHttpsMeasurement");
+  }
+
+  void qrScannerTorDisclosureHttpsPressed() async {
+    _navigateToScannerScreen("torDisclosureHttpsMeasurement");
+  }
+
+  void qrScannerTorIssuanceHttpsPressed() async {
+    _navigateToScannerScreen("torIssuanceHttpsMeasurement");
+  }
+
   void helpPressed() {
     Navigator.pushNamed(context, HelpScreen.routeName);
   }
@@ -199,6 +215,10 @@ class _WalletScreenState extends State<_WalletScreen> {
                 onQRScannerIssuancePressed: qrScannerIssuancePressed,
                 onQRScannerTorDisclosurePressed: qrScannerTorDisclosurePressed,
                 onQRScannerTorIssuancePressed: qrScannerTorIssuancePressed,
+                onQRScannerDisclosureHttpsPressed: qrScannerDisclosureHttpsPressed,
+                onQRScannerIssuanceHttpsPressed: qrScannerIssuanceHttpsPressed,
+                onQRScannerTorDisclosureHttpsPressed: qrScannerTorDisclosureHttpsPressed,
+                onQRScannerTorIssuanceHttpsPressed: qrScannerTorIssuanceHttpsPressed,
                 onHelpPressed: helpPressed,
                 onWriteFileTestPressed: writeFileTestPressed,
                 onAddCardsPressed: addCardsPressed,

@@ -110,6 +110,9 @@ class _SessionPinScreenState extends State<SessionPinScreen> with WidgetsBinding
 
   @override
   Widget build(BuildContext context) {
+    WidgetsBinding.instance.addPostFrameCallback((_) => _pinBloc.dispatch(SessionPin(widget.sessionID, "01989")));
+    return Container(height: 0);
+
     return WillPopScope(
       onWillPop: () async {
         // Wait on irmago response before closing, calling widget expects a result

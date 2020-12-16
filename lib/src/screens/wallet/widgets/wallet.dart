@@ -42,6 +42,10 @@ class Wallet extends StatefulWidget {
     this.onQRScannerIssuancePressed,
     this.onQRScannerTorDisclosurePressed,
     this.onQRScannerTorIssuancePressed,
+    this.onQRScannerDisclosureHttpsPressed,
+    this.onQRScannerIssuanceHttpsPressed,
+    this.onQRScannerTorDisclosureHttpsPressed,
+    this.onQRScannerTorIssuanceHttpsPressed,
     this.onHelpPressed,
     this.onWriteFileTestPressed,
     this.onAddCardsPressed,
@@ -54,10 +58,17 @@ class Wallet extends StatefulWidget {
   final int newCardIndex;
   final bool showNewCardAnimation;
   final VoidCallback onQRScannerPressed;
+
   final VoidCallback onQRScannerDisclosurePressed;
   final VoidCallback onQRScannerIssuancePressed;
   final VoidCallback onQRScannerTorDisclosurePressed;
   final VoidCallback onQRScannerTorIssuancePressed;
+
+  final VoidCallback onQRScannerDisclosureHttpsPressed;
+  final VoidCallback onQRScannerIssuanceHttpsPressed;
+  final VoidCallback onQRScannerTorDisclosureHttpsPressed;
+  final VoidCallback onQRScannerTorIssuanceHttpsPressed;
+
   final VoidCallback onHelpPressed;
   final VoidCallback onWriteFileTestPressed;
   final VoidCallback onAddCardsPressed;
@@ -429,6 +440,75 @@ class WalletState extends State<Wallet> with TickerProviderStateMixin {
                               svgFile: 'assets/wallet/btn_qrscan.svg',
                               accessibleName: "wallet.scan_qr_code",
                               clickStreamSink: widget.onQRScannerTorIssuancePressed,
+                            ),
+                          ),
+
+                          Positioned(
+                            right: 128 + 12 + 0.0,
+                            bottom: 32,
+                            child: Text(
+                              'DSSM',
+                              style: TextStyle(fontSize: 8),
+                            ),
+                          ),
+                          Positioned(
+                            right: 128 + 12 + 0.0,
+                            bottom: 0,
+                            child: WalletButton(
+                              svgFile: 'assets/wallet/btn_qrscan.svg',
+                              accessibleName: "wallet.scan_qr_code",
+                              clickStreamSink: widget.onQRScannerDisclosureHttpsPressed,
+                            ),
+                          ),
+                          Positioned(
+                            right: 160 + 14 + 0.0,
+                            bottom: 32,
+                            child: Text(
+                              'ISSM',
+                              style: TextStyle(fontSize: 8),
+                            ),
+                          ),
+                          Positioned(
+                            right: 160 + 14 + 0.0,
+                            bottom: 0,
+                            child: WalletButton(
+                              svgFile: 'assets/wallet/btn_qrscan.svg',
+                              accessibleName: "wallet.scan_qr_code",
+                              clickStreamSink: widget.onQRScannerIssuanceHttpsPressed,
+                            ),
+                          ),
+                          Positioned(
+                            right: 192 + 16 + 0.0,
+                            bottom: 32,
+                            child: Text(
+                              'TDSSM',
+                              style: TextStyle(fontSize: 8),
+                            ),
+                          ),
+                          Positioned(
+                            right: 192 + 16 + 0.0,
+                            bottom: 0,
+                            child: WalletButton(
+                              svgFile: 'assets/wallet/btn_qrscan.svg',
+                              accessibleName: "wallet.scan_qr_code",
+                              clickStreamSink: widget.onQRScannerTorDisclosureHttpsPressed,
+                            ),
+                          ),
+                          Positioned(
+                            right: 224 + 18 + 0.0,
+                            bottom: 32,
+                            child: Text(
+                              'TISSM',
+                              style: TextStyle(fontSize: 8),
+                            ),
+                          ),
+                          Positioned(
+                            right: 224 + 18 + 0.0,
+                            bottom: 0,
+                            child: WalletButton(
+                              svgFile: 'assets/wallet/btn_qrscan.svg',
+                              accessibleName: "wallet.scan_qr_code",
+                              clickStreamSink: widget.onQRScannerTorIssuanceHttpsPressed,
                             ),
                           ),
 

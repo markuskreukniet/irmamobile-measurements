@@ -136,7 +136,9 @@ type clientReturnURLSetSessionEvent struct {
 }
 
 type successSessionEvent struct {
-	SessionID int
+	SessionID        int
+	MeasurementAgain bool
+	MeasurementType  string
 }
 
 type failureSessionEvent struct {

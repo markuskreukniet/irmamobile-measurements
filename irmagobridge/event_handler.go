@@ -1,6 +1,8 @@
 package irmagobridge
 
 import (
+	"strings"
+
 	"github.com/go-errors/errors"
 	irma "github.com/markuskreukniet/irmago-measurements"
 	irmaclient "github.com/markuskreukniet/irmago-measurements/irmaclient"
@@ -80,6 +82,37 @@ func (ah *eventHandler) newSession(event *newSessionEvent) (err error) {
 
 	sessionHandler := &sessionHandler{sessionID: event.SessionID}
 	ah.sessionLookup[sessionHandler.sessionID] = sessionHandler
+
+	if strings.Contains(string(event.Request), "disclosureMeasurement") {
+		sessionHandler.measurementType = "disclosureMeasurement"
+	} else if strings.Contains(string(event.Request), "issuanceMeasurement") {
+		sessionHandler.measurementType = "issuanceMeasurement"
+	} else if strings.Contains(string(event.Request), "torDisclosureMeasurement") {
+		sessionHandler.measurementType = "torDisclosureMeasurement"
+	} else if strings.Contains(string(event.Request), "torIssuanceMeasurement") {
+		sessionHandler.measurementType = "torIssuanceMeasurement"
+	} else if strings.Contains(string(event.Request), "disclosureHttpsMeasurement") {
+		sessionHandler.measurementType = "disclosureHttpsMeasurement"
+	} else if strings.Contains(string(event.Request), "issuanceHttpsMeasurement") {
+		sessionHandler.measurementType = "issuanceHttpsMeasurement"
+	} else if strings.Contains(string(event.Request), "torDisclosureHttpsMeasurement") {
+		sessionHandler.measurementType = "torDisclosureHttpsMeasurement"
+	} else if strings.Contains(string(event.Request), "torIssuanceHttpsMeasurement") {
+		sessionHandler.measurementType = "torIssuanceHttpsMeasurement"
+	} else {
+		sessionHandler.measurementType = ""
+	}
+
+	client.MeasurementType = sessionHandler.measurementType
+	client.NewSessionMeasurement = -1
+	client.KssGetCommitmentsMeasurement = -1
+	client.KssGetProofPsMeasurement = -1
+
+	if strings.Contains(string(event.Request), "tor") {
+		client.UseTor = true
+	} else {
+		client.UseTor = false
+	}
 
 	sessionHandler.dismisser = client.NewSession(string(event.Request), sessionHandler)
 	return nil

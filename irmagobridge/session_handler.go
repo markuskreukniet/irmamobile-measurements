@@ -1,8 +1,13 @@
 package irmagobridge
 
 import (
+	"net/http"
+	"time"
+
 	irma "github.com/markuskreukniet/irmago-measurements"
 	"github.com/markuskreukniet/irmago-measurements/irmaclient"
+
+	"github.com/cretz/bine/tor"
 )
 
 type sessionHandler struct {
@@ -10,6 +15,10 @@ type sessionHandler struct {
 	dismisser         irmaclient.SessionDismisser
 	permissionHandler irmaclient.PermissionHandler
 	pinHandler        irmaclient.PinHandler
+	measurementType   string
+	tor               *tor.Tor
+	cancel            func()
+	httpClient        *http.Client
 }
 
 // SessionHandler implements irmaclient.Handler
@@ -31,8 +40,24 @@ func (sh *sessionHandler) ClientReturnURLSet(clientReturnURL string) {
 }
 
 func (sh *sessionHandler) Success(result string) {
+	measurementAgain := false
+
+	if sh.measurementType != "" {
+		measurementAgain = irma.IncrementMeasurementAndDetermineAgain()
+
+		if !measurementAgain {
+			irma.SendResultsAndResetMeasurements()
+		} else {
+			// sleeping is needed
+			// sometimes the user interface is faster than starting a new session
+			time.Sleep(time.Second * 13)
+		}
+	}
+
 	dispatchEvent(&successSessionEvent{
-		SessionID: sh.sessionID,
+		SessionID:        sh.sessionID,
+		MeasurementAgain: measurementAgain,
+		MeasurementType:  sh.measurementType,
 	})
 }
 

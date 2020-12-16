@@ -83,16 +83,25 @@ class ScannerScreen extends StatelessWidget {
     if (arguments != null) {
       SessionPointer sp = new SessionPointer();
 
-      sp.u = "http://141.138.142.35:8088/irma/session/F6S2w69mpyX8ABOHbTtO";
       sp.measurementType = arguments['measurementType'];
       sp.returnURL = null;
 
       if (arguments['measurementType'] == "disclosureMeasurement"
         || arguments['measurementType'] == "torDisclosureMeasurement") {
           sp.irmaqr = "disclosing";
+          sp.u = "http://141.138.142.35:8088/irma/session/F6S2w69mpyX8ABOHbTtO";
       } else if (arguments['measurementType'] == "issuanceMeasurement"
         || arguments['measurementType'] == "torIssuanceMeasurement") {
           sp.irmaqr = "issuing";
+          sp.u = "http://141.138.142.35:8088/irma/session/F6S2w69mpyX8ABOHbTtO";
+      } else if (arguments['measurementType'] == "disclosureHttpsMeasurement"
+        || arguments['measurementType'] == "torDisclosureHttpsMeasurement") {
+          sp.irmaqr = "disclosing";
+          sp.u = "https://irmamobilemeasurementtests.nl/irma/session/F6S2w69mpyX8ABOHbTtO";
+      } else if (arguments['measurementType'] == "issuanceHttpsMeasurement"
+        || arguments['measurementType'] == "torIssuanceHttpsMeasurement") {
+          sp.irmaqr = "issuing";
+          sp.u = "https://irmamobilemeasurementtests.nl/irma/session/F6S2w69mpyX8ABOHbTtO";
       }
 
       WidgetsBinding.instance.addPostFrameCallback((_) => _onSuccess(context, sp));

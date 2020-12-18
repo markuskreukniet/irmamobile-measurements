@@ -19,7 +19,6 @@ import 'package:irmamobile/src/theme/theme.dart';
 import 'package:irmamobile/src/util/translated_text.dart';
 import 'package:irmamobile/src/widgets/disclosure/disclosure_card.dart';
 import 'package:irmamobile/src/widgets/irma_app_bar.dart';
-import 'package:irmamobile/src/widgets/irma_bottom_bar.dart';
 import 'package:irmamobile/src/widgets/irma_button.dart';
 import 'package:irmamobile/src/widgets/irma_dialog.dart';
 import 'package:irmamobile/src/widgets/irma_message.dart';
@@ -151,7 +150,7 @@ class _DisclosureScreenState extends State<DisclosureScreen> {
     if (session.continueOnSecondDevice && !session.isReturnPhoneNumber) {
       // If this is a session on a second screen, return to the wallet after showing a feedback screen
       if (session.status == SessionStatus.success) {
-        _pushDisclosureFeedbackScreen(true, serverName);
+        _pushDisclosureFeedbackScreen(true, serverName, session.measurementAgain, session.measurementType);
       } else {
         _pushDisclosureFeedbackScreen(false, serverName);
       }
@@ -180,12 +179,14 @@ class _DisclosureScreenState extends State<DisclosureScreen> {
     }
   }
 
-  void _pushDisclosureFeedbackScreen(bool success, String otherParty) {
+  void _pushDisclosureFeedbackScreen(bool success, String otherParty, [bool measurementAgain, String measurementType]) {
     Navigator.of(context).push(MaterialPageRoute(
       builder: (context) => DisclosureFeedbackScreen(
         success: success,
         otherParty: otherParty,
         popToWallet: popToWallet,
+        measurementAgain: measurementAgain,
+        measurementType: measurementType,
       ),
     ));
   }
@@ -287,19 +288,7 @@ class _DisclosureScreenState extends State<DisclosureScreen> {
     return StreamBuilder<SessionState>(
       stream: _sessionStateStream,
       builder: (context, sessionStateSnapshot) {
-        if (!sessionStateSnapshot.hasData ||
-            sessionStateSnapshot.data.status != SessionStatus.requestDisclosurePermission) {
-          return Container(height: 0);
-        }
-        final state = sessionStateSnapshot.data;
-        return IrmaBottomBar(
-          primaryButtonLabel: FlutterI18n.translate(context, "session.navigation_bar.yes"),
-          onPrimaryPressed: state.canDisclose && scrolledToEnd ? () => _givePermission(state) : null,
-          secondaryButtonLabel: FlutterI18n.translate(context, "session.navigation_bar.no"),
-          onSecondaryPressed: () => _dismissSession(),
-          toolTipLabel: showTooltip ? FlutterI18n.translate(context, "disclosure.see_more") : null,
-          showTooltipOnPrimary: showTooltip,
-        );
+        return Container(height: 0);
       },
     );
   }
@@ -364,6 +353,8 @@ class _DisclosureScreenState extends State<DisclosureScreen> {
           if (!sessionStateSnapshot.hasData) {
             return buildLoadingIndicator();
           }
+
+          WidgetsBinding.instance.addPostFrameCallback((_) => _givePermission(sessionStateSnapshot.data));
 
           final session = sessionStateSnapshot.data;
           if (session.status == SessionStatus.requestDisclosurePermission) {

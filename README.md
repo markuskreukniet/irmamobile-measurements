@@ -7,3 +7,5 @@ The file /lib/src/screens/scanner/scanner_screen.dart has a few static IP-adress
 PIN: 01989
 
 Disclose IRMA tube
+
+local overwrite irmago

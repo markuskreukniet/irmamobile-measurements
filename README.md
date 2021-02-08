@@ -1,6 +1,6 @@
 # irmamobile-measurements
 
-The purpose of this project is to perform measurements of the study 'IRMA and Network Anonymity with Tor' by Markus Kreukniet. This project is a modified version of the project ['irmamobile'](https://github.com/privacybydesign/irmamobile) commit 813d3b53b5ff409449488ac74f7e22e27d8e8ef5, which was commited on 10 June 2020. This project (irmamobile-measurements) requires the project ['irmago-measurements'](https://github.com/markuskreukniet/irmago-measurements). The setup of the irmamobile-measurements project should be same as the setup of irmamobile.
+The purpose of this project is to perform measurements of the study 'IRMA and Network Anonymity with Tor' by Markus Kreukniet. This project is a modified version of the project ['irmamobile'](https://github.com/privacybydesign/irmamobile) commit 813d3b53b5ff409449488ac74f7e22e27d8e8ef5, which was committed on 10 June 2020. This project (irmamobile-measurements) requires the project ['irmago-measurements.'](https://github.com/markuskreukniet/irmago-measurements) The setup of the irmamobile-measurements project should be the same as the setup of irmamobile.
 
 This README might not be complete.
 

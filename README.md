@@ -79,4 +79,4 @@ do
 done
 ```
 
-For convience, all the files in `/measurement_results` have 25 measurements. Originally, some of these files had more or less than 25 measurements, which is possible by performing mutiple times the same measurement batch after each other or interupting a measurements batch, and than getting the files from external storage. Or code change 25. Same as used in study
+For convience, all the files in `/measurement_results` have 25 measurements. Originally, some of these files had more or less than 25 measurements, which is possible by performing mutiple times the same measurement batch after each other or interupting a measurements batch, and than getting the files from external storage. Or code change 25. Same as used in study kan dus ook 5 measurements zijn zoals in aantal mails

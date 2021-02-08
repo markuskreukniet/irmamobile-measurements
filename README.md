@@ -6,9 +6,9 @@ This README might not be complete.
 
 ## Additional Setup
 
-First, git clone the project ['irmago-measurements'](https://github.com/markuskreukniet/irmago-measurements).
+First, git clone the project ['irmago-measurements.'](https://github.com/markuskreukniet/irmago-measurements)
 
-In the file `/go.mod` of this project (irmamobile-measurements) change the part after `=>` of line 27 to the place the were the cloned project 'irmago-measurements' is. An example of line 27: `replace github.com/markuskreukniet/irmago-measurements => /home/user/go/src/github.com/markuskreukniet/irmago-measurements`
+In the file `/go.mod` of this project (irmamobile-measurements), change the part after `=>` of line 27 to the place where the cloned project 'irmago-measurements' is. An example of line 27: `replace github.com/markuskreukniet/irmago-measurements => /home/user/go/src/github.com/markuskreukniet/irmago-measurements`
 
 The file `/lib/src/screens/scanner/scanner_screen.dart` has a few static URLS, which we should change to the URLs of a active and configured IRMA server. An example of such an URL is: `"http://141.138.142.35:8088/irma/session/F6S2w69mpyX8ABOHbTtO"`.
 

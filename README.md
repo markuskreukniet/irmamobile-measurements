@@ -27,14 +27,14 @@ The app's main screen has in the bottom a grey colored part with 11 buttons. Eac
 * __DEF__. We scan a single QR code to perform a single IRMA session with this button. This button works almost like the __default__ 'Scan QR' button from the app's unmodified version.
 * __WFTest__. __Write__ a __test__ __file__ to external storage. Useful to give external storage permission and see if writing to external storage works. After we gave permission, the app writes the file to `Android/data/foundation.privacybydesign.irmamobile.alpha/files/test.txt`.
 * __Help__. The button that makes the app open the __help__ screen.
-* __DSM__. Performs a batch of 25 __disclosure session measurements__.
-* __ISM__. Performs a batch of 25 __issuance session measurements__.
-* __TDSM__. Performs a batch of 25 __disclosure session measurements__ when the app routes its network traffic over the __Tor__ network.
-* __TISM__. Performs a batch of 25 __issuance session measurements__ when the app routes its network traffic over the __Tor__ network.
-* __DSSM__. Performs a batch of 25 __disclosure session HTTPS measurements__ over __HTTPS__.
-* __ISSM__. Performs a batch of 25 __issuance session HTTPS measurements__ over __HTTPS__.
-* __TDSSM__. Performs a batch of 25 __disclosure session measurements__ over __HTTPS__ when the app routes its network traffic over the __Tor__ network.
-* __TISSM__. Performs a batch of 25 __issuance session measurements__ over __HTTPS__ when the app routes its network traffic over the __Tor__ network.
+* __DSM__. The app performs a batch of 25 __disclosure session measurements__.
+* __ISM__. The app performs a batch of 25 __issuance session measurements__.
+* __TDSM__. The app performs a batch of 25 __disclosure session measurements__ when the app routes its network traffic over the __Tor__ network.
+* __TISM__. The app performs a batch of 25 __issuance session measurements__ when the app routes its network traffic over the __Tor__ network.
+* __DSSM__. The app performs a batch of 25 __disclosure session HTTPS measurements__ over __HTTPS__.
+* __ISSM__. The app performs a batch of 25 __issuance session HTTPS measurements__ over __HTTPS__.
+* __TDSSM__. The app performs a batch of 25 __disclosure session measurements__ over __HTTPS__ when the app routes its network traffic over the __Tor__ network.
+* __TISSM__. The app performs a batch of 25 __issuance session measurements__ over __HTTPS__ when the app routes its network traffic over the __Tor__ network.
 
 ## APK
 

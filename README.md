@@ -12,11 +12,11 @@ In the file `/go.mod` of this project (irmamobile-measurements), change the part
 
 The file `/lib/src/screens/scanner/scanner_screen.dart` has a few static URLs, which we should change to the URLs of an active and configured IRMA server. An example of such an unchanged URL is: `"http://141.138.142.35:8088/irma/session/F6S2w69mpyX8ABOHbTtO"`.
 
-When we start the app for the first time, we should choose 01989 as the PIN code, and we can skip the extra security by registering with an e-mail adres. When the main screen is visible, we can tap on the _WFTest_ button and then allow external storage permission. This button's function is to write a test file to external storage.
+When we start the app for the first time, we should choose 01989 as the PIN code, and we can skip the extra security by registering with an email address. When the main screen is visible, we can tap on the _WFTest_ button and then allow external storage permission. This button's function is to write a test file to external storage.
 
 When we have started the app, entered the PIN code 01989, and started a batch of measurements, we experienced around four minutes later that the app wants us to enter the PIN code again. The app enters the PIN code 01989 automatically. However, the measurements are still interrupted. By tapping on the same measurement button, the measurements will continue.
 
-In the other project ['irmago-measurements'](https://github.com/markuskreukniet/irmago-measurements) is the configuration of sending emails. The IRMA mobile app can send email after it performed 25 measurements. The irmago-measurements explains where to change the email sending configuration. 
+In the ['irmago-measurements'](https://github.com/markuskreukniet/irmago-measurements) project is the configuration of sending emails. The IRMA mobile app can send email after it performed 25 measurements. The README of irmago-measurements explains where we can change the email sending configuration.
 
 ## The Main Screen (Wallet Screen) of the App
 

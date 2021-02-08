@@ -34,7 +34,20 @@ The main screen of the app has in the bottom a grey collored part with 11 button
 * __TDSSM__ Performs a batch of 25 __disclosure session measurements__ over __HTTPS__ when the app routes its network traffic over the __Tor__ network.
 * __TISSM__ Performs a batch of 25 __issuance session measurements__ over __HTTPS__ when the app routes its network traffic over the __Tor__ network.
 
-### Good to Know
+## APK
+
+When we build this project succesfully and the APK (Android application package) file of this build is `/apk/app-alpha-debug.apk`. We can use the APK to install to install the Android application. We used this to perform measurements needed for the study.
+
+## Results of the Study
+
+The results of the measurements we performed for the study are in the sub directories of the directorie `/measurement_results`. All these measurements are saved in microseconds and are in .txt files by which each line is a measurement. The sub directories are namend after the only active network connection the phone had that performed the measurements had while performing the measurements. The files in the subfolder also have naming convention:
+
+* When such a file start with 'tor' it means that network traffic of the app was routed over the Tor network while the measurements happened.
+* When the file name constains 'disclosure' it means that measured network message was part of a disclosure session. When the file name constains 'issuance' it means that measured network message was part of a issuance session. Disclosure and issuance can with or with a capital letter.
+* When the file name constains 'Https' it means that measured network message was part of HTTPS session. If the file name does not constain 'Https' it was HTTP session.
+* If the file name constains 'NewSession' it means that measured network message was the 'new session' message. If the file name constains 'RespondPermission' it means that measured network message was the 'respond permission' message. If the file name constains 'GetCommitments' it means that measured network message was the 'get commitments' message. If the file name constains 'GetProofPs' it means that measured network message was the 'get proof ps' message.
+
+## Good to Know
 
 The latest version of Flutter may not work with this project. We could build the succesfully 'Flutter 1.17.4' and then use the app as expected.
 
@@ -62,15 +75,4 @@ do
 done
 ```
 
-## APK
-
-When we build this project succesfully and the APK (Android application package) file of this build is `/apk/app-alpha-debug.apk`. We can use the APK to install to install the Android application. We used this to perform measurements needed for the study.
-
-## Results of the Study
-
-The results of the measurements we performed for the study are in the sub directories of the directorie `/measurement_results`. All these measurements are saved in microseconds. The sub directories are namend after the only active network connection the phone had that performed the measurements had while performing the measurements. The files in the subfolder also have naming convention:
-
-* When such a file start with 'tor' it means that network traffic of the app was routed over the Tor network while the measurements happened.
-* When the file name constains 'disclosure' it means that measured network message was part of a disclosure session. When the file name constains 'issuance' it means that measured network message was part of a issuance session. Disclosure and issuance can with or with a capital letter.
-* When the file name constains 'Https' it means that measured network message was part of HTTPS session. If the file name does not constain 'Https' it was HTTP session.
-* If the file name constains 'NewSession' it means that measured network message was the 'new session' message. If the file name constains 'RespondPermission' it means that measured network message was the 'respond permission' message. If the file name constains 'GetCommitments' it means that measured network message was the 'get commitments' message. If the file name constains 'GetProofPs' it means that measured network message was the 'get proof ps' message.
+For convience, all the files in `/measurement_results` have 25 measurements. Originally, some of these files had more or less than 25 measurements, which is possible by performing mutiple times the same measurement batch after each other or interupting a measurements batch, and than getting the files from external storage. Or code change 25. Same as used in study

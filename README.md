@@ -42,6 +42,8 @@ When we build this project succesfully and the APK (Android application package)
 
 The results of the measurements we performed for the study are in the sub directories of the directorie `/measurement_results`. All these measurements are saved in microseconds and are in .txt files by which each line is a measurement. The sub directories are namend after the only active network connection the phone had that performed the measurements had while performing the measurements. The files in the subfolder also have naming convention:
 
+---- aaanpas sub folders
+
 * When such a file start with 'tor' it means that network traffic of the app was routed over the Tor network while the measurements happened.
 * When the file name constains 'disclosure' it means that measured network message was part of a disclosure session. When the file name constains 'issuance' it means that measured network message was part of a issuance session. Disclosure and issuance can with or with a capital letter.
 * When the file name constains 'Https' it means that measured network message was part of HTTPS session. If the file name does not constain 'Https' it was HTTP session.

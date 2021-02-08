@@ -62,13 +62,15 @@ do
 done
 ```
 
+For convience, all the files in `/measurement_results` have 25 measurements. Originally, some of these files had more or less than 25 measurements, which is possible by getting the files from external storage.
+
 ## APK
 
 When we build this project succesfully and the APK (Android application package) file of this build is `/apk/app-alpha-debug.apk`. We can use the APK to install to install the Android application. We used this to perform measurements needed for the study.
 
 ## Results of the Study
 
-The results of the measurements we performed for the study are in the sub directories of the directorie `/measurement_results`. All these measurements are saved in microseconds. The sub directories are namend after the only active network connection the phone had that performed the measurements had while performing the measurements. The files in the subfolder also have naming convention:
+The results of the measurements we performed for the study are in the sub directories of the directorie `/measurement_results`. All these measurements are saved in microseconds and are in .txt files by which each line is a measurement. The sub directories are namend after the only active network connection the phone had that performed the measurements had while performing the measurements. The files in the subfolder also have naming convention:
 
 * When such a file start with 'tor' it means that network traffic of the app was routed over the Tor network while the measurements happened.
 * When the file name constains 'disclosure' it means that measured network message was part of a disclosure session. When the file name constains 'issuance' it means that measured network message was part of a issuance session. Disclosure and issuance can with or with a capital letter.

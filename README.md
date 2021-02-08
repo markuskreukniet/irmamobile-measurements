@@ -69,7 +69,7 @@ Some of the measurements that we performed for the study did measure keyshare se
 
 The ['Getting started' of the 'IRMA docs'](https://irma.app/docs/getting-started/) contains information about how to start an IRMA server and an IRMA session. The docs also has information about how to start HTTPS IRMA sessions.
 
-The study used a script like this one to automatically restart the same irma session. -----
+The study used a script like this one on ubuntu server to automatically restart the same irma session. ----- .sh file?
 ```
 #!/bin/bash
 

@@ -53,6 +53,14 @@ The subdirectories of the KSS and no KSS directories represent the only active n
 
 This table shows the attributes part of an attribute set:
 
+-
+
+| attribute set | attributes                             |
+| ------------- |--------------------------------------- |
+| 1             | pbdf.pbdf.irmatube.type                |
+| 2             | irma-demo.MijnOverheid.ageLower.over16 |
+| 3             | irma-demo.MijnOverheid.ageLower.over16<br>irma-demo.gemeente.address.street<br>irma-demo.ideal.ideal.iban<br>irma-demo.surf.surfdrive.eppn<br>irma-demo.DemoDuo.demodiploma.achieved<br>irma-demo.coronameting.login.pseudonym<br>irma-demo.kvk.official.legalEntity<br>irma-demo.amsterdam.openStadBallot.ballot |
+| 4             | pbdf.pbdf.irmatube.type<br>pbdf.pbdf.ideal.bic<br>pbdf.pbdf.linkedin.firstname<br>pbdf.pbdf.twitter.username<br>pbdf.pbdf.mobilenumber.mobilenumber<br>pbdf.sidn-pbdf.email.email<br>pbdf.gemeente.personalData.firstnames<br>pbdf.gemeente.address.city |
 
 ## Good to Know
 

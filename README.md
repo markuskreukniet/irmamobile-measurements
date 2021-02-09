@@ -25,7 +25,7 @@ In the ['irmago-measurements'](https://github.com/markuskreukniet/irmago-measure
 The app's main screen has in the bottom a grey colored part with 11 buttons. Each of these buttons has an abbreviation above it. The functions of these buttons in combination with their abbreviations are:
 
 * __DEF__. We scan a single QR code to perform a single IRMA session with this button. This button works almost like the __default__ 'Scan QR' button from the app's unmodified version.
-* __WFTest__. __Write__ a __test__ __file__ to external storage. Useful to give external storage permission and see if writing to external storage works. After we gave permission, the app writes the file to `Android/data/foundation.privacybydesign.irmamobile.alpha/files/test.txt`.
+* __WFTest__. __Write__ a __test__ __file__ to external storage. Useful to give external storage permission and see if writing to external storage works. After we give permission, the app writes a test file to `Android/data/foundation.privacybydesign.irmamobile.alpha/files/test.txt`.
 * __Help__. The button that makes the app open the __help__ screen.
 * __DSM__. The app performs a batch of 25 __disclosure session measurements__.
 * __ISM__. The app performs a batch of 25 __issuance session measurements__.

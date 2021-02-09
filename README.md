@@ -53,11 +53,11 @@ The subdirectories of the KSS and no KSS are directories that represent the only
 
 ## Good to Know
 
-The latest version of Flutter may not work with this project. We could build the succesfully 'Flutter 1.17.4' and then use the app as expected.
+The latest version of Flutter may not work with this project. The study could build this project successfully with 'Flutter 1.17.4' and then use the app as expected.
 
 The 'Screen timeout' of the phone might interrupt a batch of measurements. Therefore, it can be a good idea to set the 'Screen timeout' to a value such as 30 minutes.
 
-Measurement results do get saved in app-specific storage and in the external storage. When we performed the measurements, the measurements where saved the folder `Android/data/foundation.privacybydesign.irmamobile.alpha/files`.
+Measurement results do get saved in app-specific storage and external storage. When we performed the measurements, the app saved the measurement results in the directory `Android/data/foundation.privacybydesign.irmamobile.alpha/files`.
 
 The IRMA mobile app tries to perform 25 measurements and then send the measurement results to the e-mail irmamobilemeasurementtests@gmail.com. We change this email by modifying the [irmago-measurements](https://github.com/markuskreukniet/irmago-measurements) project. As already mentioned, the app saves these measurement also in external storage. However, we still recommend to mail the results since in rare cases some measurements do not get saved in external storage. We think that the reason for this external storage problem is that Android can block the writing of a file in external storage.
 

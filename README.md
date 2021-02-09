@@ -18,7 +18,7 @@ When we start the app for the first time, we should choose 01989 as the PIN code
 
 When we have started the app, entered the PIN code 01989, and started a batch of measurements, the study experienced around four minutes later that the app wants us to enter the PIN code again. The app enters the PIN code 01989 automatically. However, the measurements are still interrupted. By tapping on the same measurement button, the measurements will continue.
 
-In the ['irmago-measurements'](https://github.com/markuskreukniet/irmago-measurements) project is the configuration of sending emails. The IRMA mobile app can send an email after it performed 25 measurements. The README of irmago-measurements explains where we can change the email sending configuration.
+In the ['irmago-measurements'](https://github.com/markuskreukniet/irmago-measurements) project is the configuration of sending emails. The IRMA mobile app can send an email after it performed a batch of 25 measurements. The README of irmago-measurements explains where we can change the email sending configuration.
 
 ## The Main Screen (Wallet Screen) of the App
 

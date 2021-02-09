@@ -60,7 +60,7 @@ The latest version of Flutter may not work with this project. The study could bu
 
 The 'Screen timeout' of the phone might interrupt a batch of measurements. Therefore, it can be a good idea to set the 'Screen timeout' to a value such as 30 minutes.
 
-Measurement results do get saved in app-specific storage and external storage. When we performed the measurements, the app saved the measurement results in the directory `Android/data/foundation.privacybydesign.irmamobile.alpha/files`.
+Measurement results do get saved in app-specific storage and external storage. When teh study performed the measurements, the app saved the measurement results in the directory `Android/data/foundation.privacybydesign.irmamobile.alpha/files`.
 
 By tapping some buttons on the IRMA mobile app's main screen, the app tries to perform 25 measurements and then send the measurement results to the email irmamobilemeasurementtests@gmail.com. We can change this email by modifying the [irmago-measurements](https://github.com/markuskreukniet/irmago-measurements) project, which the README of that project explains. As already mentioned, the app saves measurement results also in external storage. However, we recommend mailing the results since some measurements do not get saved in external storage in rare cases. We think that the reason for this external storage problem is that Android can block the writing of a file in external storage.
 

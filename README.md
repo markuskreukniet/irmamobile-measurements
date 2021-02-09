@@ -65,11 +65,11 @@ When the IRMA mobile app tries to perform 25 measurements, and these measurement
 
 Between the measurements, the app sleeps so that the requestor can start a new session with the IRMA server, which can result in that the app shows a black screen of around 13 seconds. Also, when performing measurements over the Tor network, the restarting of the Tor network can take some time (probably around 10 seconds or longer). Sometimes the time between measurements can be longer than 45 seconds.
 
-Some of the measurements that we performed for the study did measure keyshare sessions but the keyshare messages did not get saved. These mesagges did not get saved since the app did not have the modifications to save these measurements yet.
+Some of the measurements that the study performed did measure keyshare sessions, but the keyshare messages did not get saved. These messages did not get saved since the app did (at that moment) not have the modifications to save these measurements.
 
-The ['Getting started' of the 'IRMA docs'](https://irma.app/docs/getting-started/) contains information about how to start an IRMA server and an IRMA session. The docs also has information about how to start HTTPS IRMA sessions.
+The ['Getting started' of the 'IRMA docs'](https://irma.app/docs/getting-started/) contains information about starting an IRMA server and an IRMA session. The docs also have information about how to start HTTPS IRMA sessions.
 
-The study used a script like this one on ubuntu server to automatically restart the same irma session. ----- .sh file?
+The study used a script such as this one on a Ubuntu server to restart the same IRMA session (useful for automated measurements):
 ```
 #!/bin/bash
 

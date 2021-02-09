@@ -44,12 +44,16 @@ The study built this project successfully, and a result of this build is the APK
 
 The study performed measurements, and the results of these measurements are in the directory `/measurement_results`. All these measurements are saved in microseconds and are in .txt files by which each line is a measurement. The `/measurement_results` directory has two subdirectories, HTTP and HTTPS.  The HTTP directory contains only HTTP IRMA session measurements, and the HTTPS directory contains only HTTPS IRMA session measurements. The HTTP and HTTPS directory contains two subdirectories, KSS and no KSS. The KSS directory contains keyshare message measurements, and the no KSS directory does not have keyshare message measurements.
 
-The subdirectories of the KSS and no KSS are directories that represent the only active network connection the phone had while performing the measurements and the attribute set used in the IRMA sessions. The naming of such a directory is first the network connection followed by a _ and then the attribute set. The files in the subfolder also have naming convention:
+The subdirectories of the KSS and no KSS represent the only active network connection the phone had while performing the measurements and the attribute set used in the IRMA sessions. The naming of such a directory is first the network connection followed by a _ and then the attribute set. The files in the subfolder also have naming convention:
 
 * When such a file starts with 'tor,' it means that the app's network traffic was routed over the Tor network while the measurements happened.
 * When the file name contains 'disclosure,' the measured network messages were part of a disclosure session. When the file name contains 'issuance,' the measured network messages were part of an issuance session. Disclosure and issuance can occur with or without a capital letter.
 * When the file name contains 'Https,' the measured network messages were part of an HTTPS session. If the file name does not contain 'Https,' the measured network messages were part of an HTTP session.
 * If the file name contains 'NewSession,' the measured network messages were the 'new session' message. If the file name contains 'RespondPermission,' the measured network messages were the 'respond permission' message. If the file name contains 'GetCommitments,' the measured network messages were the 'get commitments' message. If the file name contains 'GetProofPs,' the measured network messages were the 'get proof ps' message.
+
+-
+attribute sets
+-
 
 ## Good to Know
 

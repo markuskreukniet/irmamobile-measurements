@@ -36,7 +36,7 @@ The app's main screen has in the bottom a grey colored part with 11 buttons. Eac
 * __TDSSM__. The app performs a batch of 25 __disclosure session measurements__ over __HTTPS__ when it routes its network traffic over the __Tor__ network.
 * __TISSM__. The app performs a batch of 25 __issuance session measurements__ over __HTTPS__ when it routes its network traffic over the __Tor__ network.
 
-## APK
+## The Apk of the Application That the Study Used
 
 The study built this project successfully, and a result of this build is the APK (Android application package) file `/apk/app-alpha-debug.apk`. We can use this APK to install the Android application that the study did use to perform measurements.
 

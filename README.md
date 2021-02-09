@@ -47,8 +47,8 @@ The study performed measurements, and the results of these measurements are in t
 The subdirectories of the KSS and no KSS represent the only active network connection the phone had while performing the measurements and the attribute set used in the IRMA sessions. The naming of such a directory is first the network connection followed by a _ and then the attribute set. The files in the subfolder also have naming convention:
 
 * When such a file starts with 'tor,' it means that the app's network traffic was routed over the Tor network while the measurements happened.
-* When the file name contains 'disclosure,' the measured network messages were part of a disclosure session. When the file name contains 'issuance,' the measured network messages were part of an issuance session. Disclosure and issuance can occur with or without a capital letter.
-* When the file name contains 'Https,' the measured network messages were part of an HTTPS session. If the file name does not contain 'Https,' the measured network messages were part of an HTTP session.
+* When the file name contains 'disclosure,' the measured network messages were part of a disclosure session. When the file name contains 'issuance,' the measured network messages were part of an issuance session. The naming of disclosure and issuance can occur with or without a capital letter.
+* When the file name contains 'Https,' the measured network messages were part of an HTTPS IRMA session. If the file name does not contain 'Https,' the measured network messages were part of an HTTP IRMA session.
 * If the file name contains 'NewSession,' the measured network messages were the 'new session' message. If the file name contains 'RespondPermission,' the measured network messages were the 'respond permission' message. If the file name contains 'GetCommitments,' the measured network messages were the 'get commitments' message. If the file name contains 'GetProofPs,' the measured network messages were the 'get proof ps' message.
 
 This table shows the attributes part of an attribute set:

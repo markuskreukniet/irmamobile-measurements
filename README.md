@@ -69,7 +69,7 @@ Some of the measurements that the study performed did measure keyshare sessions,
 
 The ['Getting started' of the 'IRMA docs'](https://irma.app/docs/getting-started/) contains information about starting an IRMA server and an IRMA session. The docs also have information about how to start HTTPS IRMA sessions.
 
-The study used a script such as this one on a Ubuntu server to restart the same IRMA session (useful for automated measurements):
+The study used a script such as this one on a Ubuntu Server to restart the same IRMA session (useful for automated measurements):
 ```
 #!/bin/bash
 

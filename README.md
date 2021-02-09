@@ -51,7 +51,7 @@ The subdirectories of the KSS and no KSS represent the only active network conne
 * When the file name contains 'Https,' the measured network messages were part of an HTTPS session. If the file name does not contain 'Https,' the measured network messages were part of an HTTP session.
 * If the file name contains 'NewSession,' the measured network messages were the 'new session' message. If the file name contains 'RespondPermission,' the measured network messages were the 'respond permission' message. If the file name contains 'GetCommitments,' the measured network messages were the 'get commitments' message. If the file name contains 'GetProofPs,' the measured network messages were the 'get proof ps' message.
 
-This table the attributes part of an attribute set:
+This table shows the attributes part of an attribute set:
 
 
 ## Good to Know

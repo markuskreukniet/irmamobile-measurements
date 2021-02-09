@@ -53,8 +53,6 @@ The subdirectories of the KSS and no KSS directories represent the only active n
 
 This table shows the attributes part of an attribute set:
 
--
-
 | attribute set | attributes                             |
 | ------------- |--------------------------------------- |
 | 1             | pbdf.pbdf.irmatube.type                |

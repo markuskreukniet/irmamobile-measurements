@@ -46,10 +46,10 @@ The study performed measurements, and the results of these measurements are in t
 
 The subdirectories of the KSS and no KSS are directories that represent the only active network connection the phone had while performing the measurements and the attribute set used in the IRMA sessions. The naming of such a directory is first the network connection followed by a _ and then the attribute set. The files in the subfolder also have naming convention:
 
-* When such a file start with 'tor' it means that network traffic of the app was routed over the Tor network while the measurements happened.
-* When the file name constains 'disclosure' it means that measured network message was part of a disclosure session. When the file name constains 'issuance' it means that measured network message was part of a issuance session. Disclosure and issuance can with or with a capital letter.
-* When the file name constains 'Https' it means that measured network message was part of HTTPS session. If the file name does not constain 'Https' it was HTTP session.
-* If the file name constains 'NewSession' it means that measured network message was the 'new session' message. If the file name constains 'RespondPermission' it means that measured network message was the 'respond permission' message. If the file name constains 'GetCommitments' it means that measured network message was the 'get commitments' message. If the file name constains 'GetProofPs' it means that measured network message was the 'get proof ps' message.
+* When such a file starts with 'tor,' it means that the app's network traffic was routed over the Tor network while the measurements happened.
+* When the file name contains 'disclosure,' the measured network messages were part of a disclosure session. When the file name contains 'issuance,' the measured network messages were part of an issuance session. Disclosure and issuance can occur with or without a capital letter.
+* When the file name contains 'Https,' the measured network messages were part of an HTTPS session. If the file name does not contain 'Https,' the measured network messages were part of an HTTP session.
+* If the file name contains 'NewSession,' the measured network messages were the 'new session' message. If the file name contains 'RespondPermission,' the measured network messages were the 'respond permission' message. If the file name contains 'GetCommitments,' the measured network messages were the 'get commitments' message. If the file name contains 'GetProofPs,' the measured network messages were the 'get proof ps' message.
 
 ## Good to Know
 

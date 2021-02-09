@@ -79,4 +79,4 @@ do
 done
 ```
 
-For convience, all the files in `/measurement_results` have 25 measurements. Originally, some of these files had more or less than 25 measurements, which is possible by performing mutiple times the same measurement batch after each other or interupting a measurements batch, and than getting the files from external storage. Or code change 25. Same as used in study kan dus ook 5 measurements zijn zoals in aantal mails
+For convenience, all the files in /measurement_results have 25 measurements. Initially, some of these files had more or less than 25 measurements, which is possible by performing multiple times the same measurement batch after each other or interrupting a 25 measurements batch, and then getting the files from external storage. The app saves the measurement results in external storage after each other and in the same files, and the app does not clear these files after a measurement batch. Another possibility to get more or less than 25 measurements in a file is by changing the measurement batch amount in the irmago-measurements project, which the study also did for some measurements.

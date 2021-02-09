@@ -40,7 +40,7 @@ The app's main screen has in the bottom a grey colored part with 11 buttons. Eac
 
 The study built this project successfully, and a result of this build is the APK (Android application package) file `/apk/app-alpha-debug.apk`. We can use this APK to install the Android application that the study did use to perform measurements.
 
-## Results of the Study
+## Measurement Results of the Study
 
 The study performed measurements, and the results of these measurements are in the directory `/measurement_results`. All these measurements are saved in microseconds and are in .txt files by which each line is a measurement. The `/measurement_results` directory has two subdirectories, HTTP and HTTPS.  The HTTP directory contains only HTTP IRMA session measurements, and the HTTPS directory contains only HTTPS IRMA session measurements. The HTTP and HTTPS directory contains two subdirectories, KSS and no KSS. The KSS directory contains keyshare message measurements, and the no KSS directory does not have keyshare message measurements.
 

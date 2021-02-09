@@ -42,7 +42,7 @@ The study built this project successfully, and a result of this build is the APK
 
 ## Results of the Study
 
-The study performed measurements, and the results of these measurements are in the directory `/measurement_results`. All these measurements are saved in microseconds and are in .txt files by which each line is a measurement. The `/measurement_results` directory has two subdirectories, HTTP and HTTPS.  The HTTP directory contains only HTTP IRMA session measurements, and the HTTPS directory contains only IRMA session measurements. The HTTP and HTTPS directory contains two subdirectories, KSS and no KSS. The KSS directory contains keyshare message measurements, and the no KSS directory does not have keyshare message measurements.
+The study performed measurements, and the results of these measurements are in the directory `/measurement_results`. All these measurements are saved in microseconds and are in .txt files by which each line is a measurement. The `/measurement_results` directory has two subdirectories, HTTP and HTTPS.  The HTTP directory contains only HTTP IRMA session measurements, and the HTTPS directory contains only HTTPS IRMA session measurements. The HTTP and HTTPS directory contains two subdirectories, KSS and no KSS. The KSS directory contains keyshare message measurements, and the no KSS directory does not have keyshare message measurements.
 
 The subdirectories of the KSS and no KSS are directories that represent the only active network connection the phone had while performing the measurements and the attribute set used in the IRMA sessions. The naming of such a directory is first the network connection followed by a _ and then the attribute set. The files in the subfolder also have naming convention:
 
